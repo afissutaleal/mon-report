@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style  customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Mon Report</title>
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        
+        <!-- Menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="../index.html" class="app-brand-link">
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">Mon-Report</span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+
+            <!-- Dashboard -->
+            <li class="menu-item">
+              <a href="../index.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Dashboard</div>
+              </a>
+            </li>
+                        
+            <!-- Forms -->
+            <li class="menu-item">
+              <a href="form-radio-fm.html" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Pengukuran">Form Pengukuran</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="form-radio-fm.html" class="menu-link">
+                    <div data-i18n="Radio FM">Radio FM</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="form-tv-digital.html" class="menu-link">
+                    <div data-i18n="TV Digital">TV Digital</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="data-spt.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Data SPT">Data SPT</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="form-layouts-vertical.html" class="menu-link">
+                    <div data-i18n="Vertical Form">Vertical Form</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="form-layouts-horizontal.html" class="menu-link">
+                    <div data-i18n="Horizontal Form">Horizontal Form</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+                        <!-- Data Hasil Ukur -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Data Hasil Ukur">Data Hasil Ukur</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">Without menu</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Without navbar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">Container</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">Fluid</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-blank.html" class="menu-link">
+                    <div data-i18n="Blank">Blank</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="laporan.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div>Laporan</div>
+              </a>
+            </li>
+
+<!-- Data Master -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Master Data</span>
+            </li>
+            <li class="menu-item active">
+              <a href="html/database-sims.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Database SIMS">Database SIMS</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="akun.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Akun">Akun</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Login</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Register</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                    <div data-i18n="Basic">Forgot Password</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+
+          
+        <!-- Navbar -->
+<nav
+  class="layout-navbar container-xxl navbar navbar-expand-xl align-items-center bg-navbar-theme navbar-minimal"
+  id="layout-navbar"
+>
+  <!-- Toggle Sidebar (hanya muncul di layar kecil) -->
+  <div class="layout-menu-toggle navbar-nav align-items-center me-3 d-xl-none">
+    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+      <i class="bx bx-menu bx-sm"></i>
+    </a>
+  </div>
+
+  <!-- Kiri (boleh kosong / nanti bisa isi breadcrumb) -->
+  <div class="navbar-nav align-items-center flex-grow-1">
+    <!-- contoh kalau mau judul halaman:
+    <span class="fw-semibold">Dashboard Monitoring</span>
+    -->
+  </div>
+
+  <!-- Kanan -->
+  <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+    <!-- Notifikasi -->
+    <li class="nav-item me-3">
+      <a class="nav-link position-relative" href="javascript:void(0);">
+        <i class="bx bx-bell bx-sm"></i>
+        <!-- titik kecil notif, pakai CSS di bawah -->
+        <span class="notif-dot"></span>
+      </a>
+    </li>
+
+    <!-- Avatar user -->
+    <li class="nav-item navbar-dropdown dropdown-user dropdown">
+      <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+        <div class="avatar avatar-online">
+          <img src="../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle" />
+        </div>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+          <a class="dropdown-item" href="#">
+            <i class="bx bx-user me-2"></i>
+            <span class="align-middle">My Profile</span>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <i class="bx bx-cog me-2"></i>
+            <span class="align-middle">Settings</span>
+          </a>
+        </li>
+        <li><div class="dropdown-divider"></div></li>
+        <li>
+          <a class="dropdown-item" href="auth-login-basic.html" id="btn-logout">
+            <i class="bx bx-power-off me-2"></i>
+            <span class="align-middle">Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<!-- / Navbar -->
+<nav>
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          
+          <!-- Content -->
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Database </span>SIMS</h4>
+
+    <!-- CARD DATA MASTER SIMS -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+              <h5 class="mb-0">Data Master SIMS</h5>
+              <small class="text-muted">Data dari Google Sheets / API SIMS</small>
+            </div>
+            <div class="d-flex gap-2">
+              <button id="btn-reload-master" class="btn btn-outline-secondary btn-sm">
+                Reload
+              </button>
+              <button id="btn-download-master" class="btn btn-primary btn-sm">
+                Download Excel
+              </button>
+            </div>
+          </div>
+
+          <div class="card-body">
+                        <!-- FILTER SEARCH -->
+            <div class="row mb-3">
+              <div class="col-md-4 ms-auto">
+                <label for="master-search" class="form-label mb-1">Pencarian</label>
+                <input
+                  type="text"
+                  id="master-search"
+                  class="form-control form-control-sm"
+                  placeholder="Cari..."
+                />
+              </div>
+            </div>
+
+            <div id="master-loading" class="text-muted mb-2">
+              Memuat data master SIMS...
+            </div>
+            <div id="master-error" class="alert alert-danger d-none" role="alert">
+              Gagal memuat data master. Silakan cek koneksi atau URL API.
+            </div>
+
+            <!-- TABEL: dibungkus table-responsive supaya bisa scroll kanan -->
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+              <table class="table table-striped table-hover table-sm mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>No</th>
+                    <th>CLNT_ID</th>
+                    <th>NO_SIMF</th>
+                    <th>APPL_ID</th>
+                    <th>AP_PRJ_IDENT</th>
+                    <th>SITE_ID</th>
+                    <th>CLNT_NAME</th>
+                    <th>AD_NAME</th>
+                    <th>AD_FIRST_NAME</th>
+                    <th>STATUS_SIMF</th>
+                    <th>CORR_ADDR</th>
+                    <th>PHONE</th>
+                    <th>FAX</th>
+                    <th>SERVICE</th>
+                    <th>SUBSERVICE</th>
+                    <th>TRANS_TYPE</th>
+                    <th>FREQ</th>
+                    <th>FREQ_PAIR</th>
+                    <th>NUM_STATION</th>
+                    <th>ERP_PWR_DBM</th>
+                    <th>EQ_PWR</th>
+                    <th>GAIN</th>
+                    <th>LOSS</th>
+                    <th>BWIDTH</th>
+                    <th>IB</th>
+                    <th>IP</th>
+                    <th>HDDP</th>
+                    <th>HDLP</th>
+                    <th>ZONA</th>
+                    <th>STN_TYPE</th>
+                    <th>EQUIP_TYPE</th>
+                    <th>BHP</th>
+                    <th>EQ_MFR</th>
+                    <th>TX_EQP_ID</th>
+                    <th>CONFIG_PLZN_CODE</th>
+                    <th>EQ_MDL</th>
+                    <th>ANT_MFR</th>
+                    <th>ANT_MDL</th>
+                    <th>HGT_ANT</th>
+                    <th>AZIM</th>
+                    <th>ELEV_ANGLE</th>
+                    <th>MASTER_PLZN_CODE</th>
+                    <th>EMIS_CLASS_1</th>
+                    <th>STN_NAME</th>
+                    <th>STN_ADDR</th>
+                    <th>CALLSIGN</th>
+                    <th>SID_LONG</th>
+                    <th>SID_LAT</th>
+                    <th>CIRCUIT_LEN</th>
+                    <th>LAT_DEG</th>
+                    <th>LAT_MIN</th>
+                    <th>LAT_SEC</th>
+                    <th>LAT_DIR_IND</th>
+                    <th>LONG_DEG</th>
+                    <th>LONG_MIN</th>
+                    <th>LONG_SEC</th>
+                    <th>LONG_DIR_IND</th>
+                    <th>AREA_OF_SERVICE</th>
+                    <th>MAX_COV_RADIUS</th>
+                    <th>H_ASL</th>
+                    <th>NUM_SETS</th>
+                    <th>CURR_LIC_NUM</th>
+                    <th>APPL_DATE</th>
+                    <th>LICENCE_DATE</th>
+                    <th>VALIDITY_DATE</th>
+                    <th>UMUR_ISR</th>
+                    <th>VILLAGE</th>
+                    <th>CITY</th>
+                    <th>DISTRICT</th>
+                    <th>PROVINCE</th>
+                    <th>SV_ID</th>
+                    <th>SS_ID</th>
+                    <th>TO_APPL_ID</th>
+                    <th>TO_CLNT_ID</th>
+                    <th>LINK_ID</th>
+                    <th>TCS_ID</th>
+                    <th>MASA_LAKU</th>
+                    <th>ARCHIV_DATE</th>
+                    <th>TO_SITE_ID</th>
+                    <th>STASIUN_LAWAN</th>
+                    <th>RECEV_TYPE</th>
+                    <th>TO_CALLSIGN</th>
+                    <th>TO_LAT_DEG</th>
+                    <th>TO_LAT_MIN</th>
+                    <th>TO_LAT_SEC</th>
+                    <th>TO_LAT_DIR_IND</th>
+                    <th>TO_LONG_DEG</th>
+                    <th>TO_LONG_MIN</th>
+                    <th>TO_LONG_SEC</th>
+                    <th>TO_LONG_DIR_IND</th>
+                    <th>COST_CAT</th>
+                    <th>AP_REQUEST_TYPE</th>
+                    <th>TGL_QUERY</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-master">
+                  <!-- diisi lewat JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /CARD DATA MASTER SIMS -->
+
+  </div>
+  <!-- /Content -->
+</div>
+<!-- /Content wrapper -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , Mon-Report Balmon Samarinda
+                  <a href="https://pelayanan.balmonsamarinda.com/" target="_blank" class="footer-link fw-bolder">Balmon Samarinda</a>
+                </div>
+                <div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../mon-report/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../mon-report/assets/vendor/libs/popper/popper.js"></script>
+    <script src="../mon-report/assets/vendor/js/bootstrap.js"></script>
+    <script src="../mon-report/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../mon-report/assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../mon-report/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="../mon-report/assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <!--<script src="../mon-report/assets/js/dashboards-analytics.js"></script>-->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- Parsing JSON dari Google Spreadsheet API -->
+  <script>
+  const API_URL_SPT = "https://script.google.com/macros/s/AKfycbzTyAWHCELzuBs9PfWyBR4LTxmmwvXcory37nggIZq-Dr48YYJTcZzG7808y1q_NaI/exec";
+
+  let DATA_SPT = [];
+  let filterTahun = "";
+  let filterKabkota = "";
+  let searchQuery = "";
+
+  // Format tanggal hanya YYYY-MM-DD
+  function formatDateOnly(value) {
+    if (!value) return "";
+    return value.split("T")[0];
+  }
+
+  function getYearFromDate(value) {
+    if (!value) return "";
+    const d = new Date(value);
+    return isNaN(d) ? "" : d.getFullYear().toString();
+  }
+
+  function renderTable() {
+    const tbody = document.getElementById("tbody-spt");
+    const loadingEl = document.getElementById("spt-loading");
+
+    if (!tbody) return;
+
+    if (loadingEl) loadingEl.classList.add("d-none");
+
+    const rows = DATA_SPT.filter(row => {
+      // filter tahun
+      const year = getYearFromDate(row.tanggal_spt);
+      if (filterTahun && year !== filterTahun) return false;
+
+      // filter kab/kota (case-insensitive)
+      if (filterKabkota && (row.kab_kota || "").toLowerCase() !== filterKabkota.toLowerCase()) return false;
+
+      // search (nomor SPT / nama kegiatan)
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        const nomor = (row.nomor_spt || "").toLowerCase();
+        const keg = (row.nama_kegiatan || "").toLowerCase();
+        if (!nomor.includes(q) && !keg.includes(q)) return false;
+      }
+
+      return true;
+    });
+
+    if (!rows.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="9" class="text-center text-muted">Tidak ada data untuk filter ini</td>
+        </tr>`;
+      return;
+    }
+
+    tbody.innerHTML = rows
+      .map((row, index) => {
+        const idx = index + 1;
+        const tMulai = formatDateOnly(row.tanggal_mulai);
+        const tSelesai = formatDateOnly(row.tanggal_selesai);
+        const tSpt = formatDateOnly(row.tanggal_spt);
+
+        return `
+          <tr>
+            <td>${idx}</td>
+            <td>${row.nomor_spt || ""}</td>
+            <td>${tSpt || ""}</td>
+            <td>${row.nama_kegiatan || ""}</td>
+            <td>${row.kab_kota || ""}</td>
+            <td>${tMulai || ""}</td>
+            <td>${tSelesai || ""}</td>
+            <td>
+              ${
+                row.upload_spt
+                  ? `<a href="${row.upload_spt}" target="_blank" class="btn btn-sm btn-outline-primary">SPT</a>`
+                  : "-"
+              }
+            </td>
+            <td>
+              <button class="btn btn-sm btn-link p-0" type="button">
+                Detail
+              </button>
+            </td>
+          </tr>
+        `;
+      })
+      .join("");
+  }
+
+  function populateFilters() {
+    const tahunSelect = document.getElementById("filter-tahun");
+    const kabSelect = document.getElementById("filter-kabkota");
+
+    if (!tahunSelect || !kabSelect) return;
+
+    const tahunSet = new Set();
+    const kabSet = new Set();
+
+    DATA_SPT.forEach(row => {
+      const y = getYearFromDate(row.tanggal_spt);
+      if (y) tahunSet.add(y);
+
+      if (row.kab_kota) kabSet.add(row.kab_kota);
+    });
+
+    tahunSelect.innerHTML =
+      '<option value="">Semua Tahun</option>' +
+      Array.from(tahunSet)
+        .sort()
+        .map(t => `<option value="${t}">${t}</option>`)
+        .join("");
+
+    kabSelect.innerHTML =
+      '<option value="">Semua Kab/Kota</option>' +
+      Array.from(kabSet)
+        .sort()
+        .map(k => `<option value="${k}">${k}</option>`)
+        .join("");
+  }
+
+  async function loadSPT() {
+    const tbody = document.getElementById("tbody-spt");
+    const loadingEl = document.getElementById("spt-loading");
+    const errorEl = document.getElementById("spt-error");
+
+    if (tbody) {
+      tbody.innerHTML =
+        '<tr><td colspan="9" class="text-center text-muted">Memuat data...</td></tr>';
+    }
+    if (loadingEl) loadingEl.classList.remove("d-none");
+    if (errorEl) errorEl.classList.add("d-none");
+
+    try {
+      const res = await fetch(API_URL_SPT);
+      const data = await res.json();
+
+      if (!Array.isArray(data) || !data.length) {
+        DATA_SPT = [];
+        renderTable();
+        return;
+      }
+
+      DATA_SPT = data;
+      populateFilters();
+      renderTable();
+    } catch (err) {
+      console.error("Gagal load SPT:", err);
+      if (loadingEl) loadingEl.classList.add("d-none");
+      if (errorEl) errorEl.classList.remove("d-none");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tahunSelect = document.getElementById("filter-tahun");
+    const kabSelect = document.getElementById("filter-kabkota");
+    const searchInput = document.getElementById("search-spt");
+    const resetBtn = document.getElementById("btn-reset-filter");
+
+    if (tahunSelect) {
+      tahunSelect.addEventListener("change", e => {
+        filterTahun = e.target.value;
+        renderTable();
+      });
+    }
+
+    if (kabSelect) {
+      kabSelect.addEventListener("change", e => {
+        filterKabkota = e.target.value;
+        renderTable();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", e => {
+        searchQuery = e.target.value.trim();
+        renderTable();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        // kosongkan nilai di form
+        if (tahunSelect) tahunSelect.value = "";
+        if (kabSelect) kabSelect.value = "";
+        if (searchInput) searchInput.value = "";
+
+        // reset variable filter
+        filterTahun = "";
+        filterKabkota = "";
+        searchQuery = "";
+
+        // render ulang semua data
+        renderTable();
+      });
+    }
+
+    loadSPT();
+  });
+</script>
+
+    <!-- Parsing JSON dari Google Spreadsheet API - MASTER SIMS -->
+    <script>
+      // URL Web App Apps Script yang mengeluarkan JSON MASTER SIMS
+      const API_URL_MASTER = "https://script.google.com/macros/s/AKfycbzTyAWHCELzuBs9PfWyBR4LTxmmwvXcory37nggIZq-Dr48YYJTcZzG7808y1q_NaI/exec";
+
+      // Urutan kolom persis seperti judul header di spreadsheet
+      const MASTER_COLUMNS = [
+        "CLNT_ID","NO_SIMF","APPL_ID","AP_PRJ_IDENT","SITE_ID","CLNT_NAME","AD_NAME","AD_FIRST_NAME",
+        "STATUS_SIMF","CORR_ADDR","PHONE","FAX","SERVICE","SUBSERVICE","TRANS_TYPE","FREQ","FREQ_PAIR",
+        "NUM_STATION","ERP_PWR_DBM","EQ_PWR","GAIN","LOSS","BWIDTH","IB","IP","HDDP","HDLP","ZONA",
+        "STN_TYPE","EQUIP_TYPE","BHP","EQ_MFR","TX_EQP_ID","CONFIG_PLZN_CODE","EQ_MDL","ANT_MFR",
+        "ANT_MDL","HGT_ANT","AZIM","ELEV_ANGLE","MASTER_PLZN_CODE","EMIS_CLASS_1","STN_NAME",
+        "STN_ADDR","CALLSIGN","SID_LONG","SID_LAT","CIRCUIT_LEN","LAT_DEG","LAT_MIN","LAT_SEC",
+        "LAT_DIR_IND","LONG_DEG","LONG_MIN","LONG_SEC","LONG_DIR_IND","AREA_OF_SERVICE",
+        "MAX_COV_RADIUS","H_ASL","NUM_SETS","CURR_LIC_NUM","APPL_DATE","LICENCE_DATE","VALIDITY_DATE",
+        "UMUR_ISR","VILLAGE","CITY","DISTRICT","PROVINCE","SV_ID","SS_ID","TO_APPL_ID","TO_CLNT_ID",
+        "LINK_ID","TCS_ID","MASA_LAKU","ARCHIV_DATE","TO_SITE_ID","STASIUN_LAWAN","RECEV_TYPE",
+        "TO_CALLSIGN","TO_LAT_DEG","TO_LAT_MIN","TO_LAT_SEC","TO_LAT_DIR_IND","TO_LONG_DEG",
+        "TO_LONG_MIN","TO_LONG_SEC","TO_LONG_DIR_IND","COST_CAT","AP_REQUEST_TYPE","TGL_QUERY"
+      ];
+
+      // key object mengikuti normalisasi Apps Script (lowercase, underscore)
+      const MASTER_KEYS = MASTER_COLUMNS.map(col => col.toLowerCase());
+
+      let DATA_MASTER = [];
+      let MASTER_SEARCH = "";
+
+      function renderMasterTable() {
+        const tbody = document.getElementById("tbody-master");
+        const loadingEl = document.getElementById("master-loading");
+        if (!tbody) return;
+
+        if (loadingEl) loadingEl.classList.add("d-none");
+
+        // filter berdasarkan field penting + keyword search
+        const filtered = DATA_MASTER.filter(row => {
+          if (!MASTER_SEARCH) return true;
+
+          const q = MASTER_SEARCH.toLowerCase();
+
+          // field yang paling sering dipakai cari
+          const searchFields = [
+            "clnt_id",
+            "no_simf",
+            "clnt_name",
+            "stn_name",
+            "callsign",
+            "site_id"
+          ];
+
+          return searchFields.some(key => {
+            const v = (row[key] == null ? "" : String(row[key])).toLowerCase();
+            return v.includes(q);
+          });
+        });
+
+        if (!filtered.length) {
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="${MASTER_COLUMNS.length + 1}" class="text-center text-muted">
+                Tidak ada data untuk pencarian ini
+              </td>
+            </tr>
+          `;
+          return;
+        }
+
+        const rowsHtml = filtered.map((row, idx) => {
+          const noCell = `<td>${idx + 1}</td>`;
+
+          const dataCells = MASTER_KEYS.map(key => {
+            let val = row[key];
+            if (val == null) val = "";
+            return `<td>${val}</td>`;
+          }).join("");
+
+          return `<tr>${noCell}${dataCells}</tr>`;
+        }).join("");
+
+        tbody.innerHTML = rowsHtml;
+      }
+
+      async function loadMasterData() {
+        const tbody = document.getElementById("tbody-master");
+        const loadingEl = document.getElementById("master-loading");
+        const errorEl = document.getElementById("master-error");
+
+        if (tbody) {
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="${MASTER_COLUMNS.length + 1}" class="text-center text-muted">
+                Memuat data master SIMS...
+              </td>
+            </tr>
+          `;
+        }
+        if (loadingEl) loadingEl.classList.remove("d-none");
+        if (errorEl) errorEl.classList.add("d-none");
+
+        try {
+          const res = await fetch(API_URL_MASTER);
+          const data = await res.json();
+
+          if (!Array.isArray(data)) {
+            throw new Error("Response API bukan array");
+          }
+
+          DATA_MASTER = data;
+          renderMasterTable();
+        } catch (err) {
+          console.error("Gagal load master SIMS:", err);
+          if (loadingEl) loadingEl.classList.add("d-none");
+          if (errorEl) errorEl.classList.remove("d-none");
+        }
+      }
+
+      function downloadMasterExcel() {
+        if (!DATA_MASTER.length) {
+          alert("Belum ada data untuk di-download.");
+          return;
+        }
+
+        const headerRow = ["No"].concat(MASTER_COLUMNS);
+
+        const rows = DATA_MASTER.map((row, idx) => {
+          const cols = [idx + 1];
+          MASTER_KEYS.forEach(key => {
+            let val = row[key];
+            if (val == null) val = "";
+            val = String(val);
+
+            if (val.includes('"')) {
+              val = val.replace(/"/g, '""');
+            }
+            if (val.includes(",") || val.includes("\n")) {
+              val = `"${val}"`;
+            }
+
+            cols.push(val);
+          });
+          return cols.join(",");
+        });
+
+        const csvContent = headerRow.join(",") + "\r\n" + rows.join("\r\n");
+
+        const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "data_master_sims.csv";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // load awal
+        loadMasterData();
+
+        const reloadBtn = document.getElementById("btn-reload-master");
+        const downloadBtn = document.getElementById("btn-download-master");
+        const searchInput = document.getElementById("master-search");
+
+        if (reloadBtn) {
+          reloadBtn.addEventListener("click", () => {
+            loadMasterData();
+          });
+        }
+
+        if (downloadBtn) {
+          downloadBtn.addEventListener("click", () => {
+            downloadMasterExcel();
+          });
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener("input", (e) => {
+            MASTER_SEARCH = e.target.value.trim();
+            renderMasterTable();
+          });
+        }
+      });
+    </script>
+
+
+  </body>
+
+</html>

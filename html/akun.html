@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Mon Report - Akun</title>
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css" />
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" />
+  <link rel="stylesheet" href="../assets/css/demo.css" />
+
+  <style>
+    .profile-subtext {
+      color: rgba(67, 89, 113, .65);
+      font-size: .85rem;
+      margin-top: .25rem;
+    }
+    .readonly-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .85rem;
+      color: rgba(67, 89, 113, .75);
+      user-select: none;
+    }
+    .readonly-hint i { font-size: 1rem; }
+  </style>
+</head>
+
+<body>
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+
+      <!-- Menu -->
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="../index.html" class="app-brand-link">
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Mon-Report</span>
+          </a>
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <li class="menu-item">
+            <a href="../index.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <div data-i18n="Analytics">Dashboard</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="form-radio-fm.html" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-detail"></i>
+              <div data-i18n="Form Pengukuran">Form Pengukuran</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="form-radio-fm.html" class="menu-link">
+                  <div data-i18n="Radio FM">Radio FM</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="form-tv-digital.html" class="menu-link">
+                  <div data-i18n="TV Digital">TV Digital</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-item">
+            <a href="data-spt.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-detail"></i>
+              <div data-i18n="Data SPT">Data SPT</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="data-hasil-ukur.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div data-i18n="Data Hasil Ukur">Data Hasil Ukur</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="laporan.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-file"></i>
+              <div>Laporan</div>
+            </a>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Master Data</span>
+          </li>
+          <li class="menu-item">
+            <a href="database-sims.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div data-i18n="Database SIMS">Database SIMS</div>
+            </a>
+          </li>
+
+          <li class="menu-item active">
+            <a href="akun.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+              <div data-i18n="Akun">Akun</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                  <div data-i18n="Basic">Login</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                  <div data-i18n="Basic">Register</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                  <div data-i18n="Basic">Forgot Password</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <div class="layout-page">
+        <!-- Navbar -->
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl align-items-center bg-navbar-theme navbar-minimal"
+          id="layout-navbar">
+
+          <div class="layout-menu-toggle navbar-nav align-items-center me-3 d-xl-none">
+            <a class="nav-item nav-link px-0" href="javascript:void(0);">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav align-items-center flex-grow-1"></div>
+
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+            <li class="nav-item me-3">
+              <a class="nav-link position-relative" href="javascript:void(0);">
+                <i class="bx bx-bell bx-sm"></i>
+                <span class="notif-dot"></span>
+              </a>
+            </li>
+
+            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                <div class="d-flex align-items-center">
+                  <div class="avatar avatar-online me-2">
+                    <img src="../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                  <div class="d-none d-md-flex flex-column" style="line-height:1.1">
+                    <span id="nav_user_name" class="fw-semibold">-</span>
+                    <small id="nav_user_role" class="text-muted">-</small>
+                  </div>
+                </div>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li class="px-3 py-2">
+                  <div class="d-flex flex-column">
+                    <span id="dd_user_name" class="fw-semibold">-</span>
+                    <small id="dd_user_email" class="text-muted">-</small>
+                  </div>
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="akun.html">
+                    <i class="bx bx-user me-2"></i>
+                    <span class="align-middle">My Profile</span>
+                  </a>
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="auth-login-basic.html" id="btn-logout">
+                    <i class="bx bx-power-off me-2"></i>
+                    <span class="align-middle">Log Out</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- / Navbar -->
+
+        <div class="content-wrapper">
+          <div class="container-xxl flex-grow-1 container-p-y">
+
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="fw-bold py-3 mb-0"><span class="text-muted fw-light">Pengaturan</span> / Akun</h4>
+              <span class="readonly-hint" id="readonlyHint">
+                <i class="bx bx-lock-alt"></i> Mode baca (klik Edit untuk mengubah)
+              </span>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="akun.html"><i class="bx bx-user me-1"></i> Akun</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="notifikasi.html"><i class="bx bx-bell me-1"></i> Notifikasi</a>
+                  </li>
+                </ul>
+
+                <div class="card mb-4">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <div>
+                      <h5 class="mb-0">Profile Details</h5>
+                      <div class="profile-subtext" id="profileSubText">
+                        Profil diambil dari sesi login di browser.
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary" id="btn-edit">
+                      <i class="bx bx-edit-alt me-1"></i> Edit
+                    </button>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                      <img src="../assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded" height="100" width="100"
+                        id="uploadedAvatar" />
+                      <div>
+                        <div class="fw-semibold" id="profile_name">-</div>
+                        <div class="text-muted" id="profile_role">-</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-0" />
+
+                  <div class="card-body">
+                    <form id="formAccountSettings" onsubmit="return false">
+                      <div class="row">
+                        <div class="mb-3 col-md-6">
+                          <label for="nama_pegawai" class="form-label">Nama Pegawai</label>
+                          <input class="form-control" type="text" id="nama_pegawai" name="nama_pegawai" value="-" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                          <label for="role" class="form-label">Role</label>
+                          <input class="form-control" type="text" id="role" name="role" value="-" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                          <label for="username" class="form-label">Username</label>
+                          <input class="form-control" type="text" id="username" name="username" value="-" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                          <label for="email" class="form-label">E-mail</label>
+                          <input class="form-control" type="text" id="email" name="email" value="-" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                          <label for="status_aktif" class="form-label">Status Aktif</label>
+                          <input class="form-control" type="text" id="status_aktif" name="status_aktif" value="-" />
+                        </div>
+                      </div>
+
+                      <div class="mt-2 d-flex gap-2">
+                        <button type="button" class="btn btn-primary" id="btn-save" disabled>
+                          Save changes
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" id="btn-cancel" disabled>
+                          Cancel
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+              <div class="mb-2 mb-md-0">
+                ©
+                <script>document.write(new Date().getFullYear());</script>
+                , Mon-Report
+                <a href="https://pelayanan.balmonsamarinda.com/" target="_blank" class="footer-link fw-bolder">Balmon Samarinda</a>
+              </div>
+            </div>
+          </footer>
+
+          <div class="content-backdrop fade"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+
+  <!-- Core JS -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <!-- Vendors JS (optional) -->
+  <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- ======= PROFIL / SESSION SCRIPT (SINGLE SOURCE OF TRUTH) ======= -->
+  <script>
+    // Kunci storage yang kamu minta
+    const SESSION_USER_KEY = "MONREPORT_USER";
+    const SESSION_TOKEN_KEY = "MONREPORT_TOKEN";
+
+    function safeStr(v) {
+      return v === null || v === undefined ? "" : String(v);
+    }
+
+    function getSessionUser() {
+      try {
+        const raw = localStorage.getItem(SESSION_USER_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function getToken() {
+      return safeStr(localStorage.getItem(SESSION_TOKEN_KEY)).trim();
+    }
+
+    function roleLabel(role) {
+      const r = safeStr(role).toLowerCase();
+      if (r === "monitoring") return "Petugas Monitoring";
+      if (r === "verifikator") return "Verifikator";
+      return role || "-";
+    }
+
+    function setText(id, text) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = safeStr(text);
+    }
+
+    function setValue(id, val) {
+      const el = document.getElementById(id);
+      if (el) el.value = safeStr(val);
+    }
+
+    function setReadonly(isReadonly) {
+      const ids = ["nama_pegawai", "role", "username", "email", "status_aktif"];
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.readOnly = isReadonly;
+      });
+
+      document.getElementById("btn-save").disabled = isReadonly;
+      document.getElementById("btn-cancel").disabled = isReadonly;
+
+      const hint = document.getElementById("readonlyHint");
+      if (hint) hint.style.visibility = isReadonly ? "visible" : "hidden";
+    }
+
+    function fillNavbar(user) {
+      const nama = safeStr(user?.nama_pegawai).trim() || "-";
+      const email = safeStr(user?.email).trim() || "-";
+      const role = roleLabel(user?.role);
+
+      setText("nav_user_name", nama);
+      setText("nav_user_role", role);
+
+      setText("dd_user_name", nama);
+      setText("dd_user_email", email);
+    }
+
+    function fillProfileCard(user) {
+      const nama = safeStr(user?.nama_pegawai).trim() || "-";
+      const role = roleLabel(user?.role);
+      setText("profile_name", nama);
+      setText("profile_role", role);
+    }
+
+    function fillForm(user) {
+      // Sesuai kolom sheet akun: username, email, nama_pegawai, role, status_aktif
+      setValue("nama_pegawai", user?.nama_pegawai || "-");
+      setValue("role", roleLabel(user?.role || "-")); // tampilkan label
+      setValue("username", user?.username || "-");
+      setValue("email", user?.email || "-");
+      setValue("status_aktif", user?.status_aktif || "-");
+    }
+
+    function normalizeUserForSave() {
+      // Saat save, kita simpan role dalam bentuk value asli (monitoring/verifikator) bila bisa
+      // Kalau user edit role di input, kita mapping balik sederhana:
+      const roleInput = safeStr(document.getElementById("role")?.value).trim().toLowerCase();
+      let roleValue = roleInput;
+      if (roleInput === "petugas monitoring") roleValue = "monitoring";
+      if (roleInput === "verifikator") roleValue = "verifikator";
+
+      return {
+        username: safeStr(document.getElementById("username")?.value).trim(),
+        email: safeStr(document.getElementById("email")?.value).trim(),
+        nama_pegawai: safeStr(document.getElementById("nama_pegawai")?.value).trim(),
+        role: roleValue,
+        status_aktif: safeStr(document.getElementById("status_aktif")?.value).trim()
+      };
+    }
+
+    function requireLoginOrRedirect(loginPage = "auth-login-basic.html") {
+      const token = getToken();
+      const user = getSessionUser();
+      if (!token || !user) {
+        window.location.href = loginPage;
+        return null;
+      }
+      return { token, user };
+    }
+
+    function wireLogout() {
+      const btn = document.getElementById("btn-logout");
+      if (!btn) return;
+
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        localStorage.removeItem(SESSION_TOKEN_KEY);
+        localStorage.removeItem(SESSION_USER_KEY);
+        window.location.href = "auth-login-basic.html";
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Jika akun.html WAJIB login, aktifkan baris ini:
+      // const sess = requireLoginOrRedirect("auth-login-basic.html");
+      // if (!sess) return;
+
+      const user = getSessionUser();
+
+      // Kalau belum login, tetap render tapi tampil "-" dan kasih info.
+      if (!user) {
+        setText("profileSubText", "Belum ada sesi login. Silakan login terlebih dahulu.");
+        setReadonly(true);
+        wireLogout();
+        return;
+      }
+
+      // Render awal
+      fillNavbar(user);
+      fillProfileCard(user);
+      fillForm(user);
+
+      // Mode awal: read-only
+      setReadonly(true);
+
+      // Snapshot untuk Cancel
+      const snapshot = JSON.parse(JSON.stringify(user));
+
+      // Tombol edit
+      document.getElementById("btn-edit")?.addEventListener("click", () => {
+        setReadonly(false);
+      });
+
+      // Cancel = balikin ke snapshot & lock lagi
+      document.getElementById("btn-cancel")?.addEventListener("click", () => {
+        fillNavbar(snapshot);
+        fillProfileCard(snapshot);
+        fillForm(snapshot);
+        setReadonly(true);
+      });
+
+      // Save = simpan ke localStorage & lock lagi
+      document.getElementById("btn-save")?.addEventListener("click", () => {
+        const updated = normalizeUserForSave();
+        localStorage.setItem(SESSION_USER_KEY, JSON.stringify(updated));
+
+        // Update UI pakai data terbaru
+        fillNavbar(updated);
+        fillProfileCard(updated);
+        fillForm(updated);
+        setReadonly(true);
+      });
+
+      wireLogout();
+    });
+  </script>
+
+  <script>
+  const API_URL = "https://script.google.com/macros/s/AKfycbyZUQjXNJdhhRrD3Hsev_X0Z9ilcJml3ICQK0ygqssDrGcrXTYbsAz3dZtXMk8r0bBN/exec";
+
+  const SESSION_USER_KEY = "MONREPORT_USER";
+  const SESSION_TOKEN_KEY = "MONREPORT_TOKEN";
+
+  function qs(sel) { return document.querySelector(sel); }
+  function safeStr(v) { return v === null || v === undefined ? "" : String(v); }
+
+  function saveSession(user) {
+    localStorage.setItem(SESSION_USER_KEY, JSON.stringify(user));
+    // Token sederhana (karena Apps Script kamu belum pakai token beneran)
+    localStorage.setItem(SESSION_TOKEN_KEY, "ok");
+  }
+
+  async function doLogin() {
+    const username = safeStr(qs("#username")?.value).trim(); // pastikan id input = username
+    const password = safeStr(qs("#password")?.value).trim(); // pastikan id input = password
+
+    if (!username || !password) {
+      alert("Username dan password wajib diisi.");
+      return;
+    }
+
+    const url = `${API_URL}?action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+
+    try {
+      const res = await fetch(url, { method: "GET", cache: "no-store" });
+      const json = await res.json();
+      console.log("LOGIN_RES:", json);
+
+      if (!json || json.status !== "success" || !json.user) {
+        alert(json?.message || "Login gagal.");
+        return;
+      }
+
+      // Simpan sesi agar semua halaman (dashboard/akun/dll) bisa baca
+      saveSession(json.user);
+
+      // Arahkan ke dashboard
+      window.location.href = "../index.html";
+    } catch (e) {
+      console.error(e);
+      alert("Gagal login. Cek koneksi / API URL.");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // pastikan tombol login punya id="btn-login"
+    const btn = qs("#btn-login");
+    if (btn) btn.addEventListener("click", (e) => { e.preventDefault(); doLogin(); });
+
+    // optional: enter untuk submit
+    qs("#password")?.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") doLogin();
+    });
+  });
+</script>
+
+
+</body>
+</html>

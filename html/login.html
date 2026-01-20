@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Mon Report - Login</title>
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <style>
+      .auth-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .auth-card {
+        max-width: 420px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="auth-wrapper bg-light">
+      <div class="card auth-card shadow-sm">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <span class="app-brand-text fw-bolder fs-4">Mon-Report</span>
+            </div>
+            <p class="mb-0 text-muted">Silakan login untuk mengakses dashboard monitoring</p>
+          </div>
+
+          <!-- Alert -->
+          <div id="login-alert" class="alert alert-danger d-none" role="alert"></div>
+
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="login-username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="login-username"
+                name="username"
+                placeholder="mis. samarindapeg"
+                autocomplete="username"
+                required
+              />
+            </div>
+
+            <div class="mb-3 form-password-toggle">
+              <label class="form-label" for="login-password">Password</label>
+              <div class="input-group input-group-merge">
+                <input
+                  type="password"
+                  id="login-password"
+                  class="form-control"
+                  name="password"
+                  placeholder="••••••••"
+                  aria-describedby="password"
+                  autocomplete="current-password"
+                  required
+                />
+                <span class="input-group-text cursor-pointer" id="toggle-password">
+                  <i class="bx bx-hide"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me" checked />
+                <label class="form-check-label" for="remember-me"> Remember me </label>
+              </div>
+            </div>
+
+            <div class="mb-3 d-grid">
+              <button type="submit" id="btn-login" class="btn btn-primary">
+                <span id="btn-login-text">Login</span>
+                <span
+                  id="btn-login-spinner"
+                  class="spinner-border spinner-border-sm ms-2 d-none"
+                  role="status"
+                ></span>
+              </button>
+            </div>
+          </form>
+
+          <div class="text-center mt-3">
+            <small class="text-muted">
+              Gunakan akun:
+              <br />
+              <strong>Petugas Monitoring:</strong> samarindapeg
+              <br />
+              <strong>Verifikator:</strong> samarindaveri
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core JS -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script>
+      // ====== KONFIG LOGIN ======
+      // GANTI dengan URL Web App Apps Script yang menangani action=login
+      const API_URL_LOGIN =
+        "https://script.google.com/macros/s/AKfycbyZUQjXNJdhhRrD3Hsev_X0Z9ilcJml3ICQK0ygqssDrGcrXTYbsAz3dZtXMk8r0bBN/exec";
+
+      const MONREPORT_USER_KEY = "monreport_user";
+
+      function setCurrentUser(user) {
+        if (!user) return;
+        try {
+          localStorage.setItem(MONREPORT_USER_KEY, JSON.stringify(user));
+        } catch (e) {
+          console.warn("Gagal menyimpan user ke localStorage:", e);
+        }
+      }
+
+      function getCurrentUser() {
+        try {
+          const raw = localStorage.getItem(MONREPORT_USER_KEY);
+          if (!raw) return null;
+          return JSON.parse(raw);
+        } catch (e) {
+          console.warn("Gagal baca user dari localStorage:", e);
+          return null;
+        }
+      }
+
+      function showAlert(msg) {
+        const alertEl = document.getElementById("login-alert");
+        if (!alertEl) return;
+        alertEl.textContent = msg || "Login gagal.";
+        alertEl.classList.remove("d-none");
+      }
+
+      function hideAlert() {
+        const alertEl = document.getElementById("login-alert");
+        if (!alertEl) return;
+        alertEl.classList.add("d-none");
+        alertEl.textContent = "";
+      }
+
+      function setLoading(isLoading) {
+        const btn = document.getElementById("btn-login");
+        const text = document.getElementById("btn-login-text");
+        const spinner = document.getElementById("btn-login-spinner");
+
+        if (!btn || !text || !spinner) return;
+
+        btn.disabled = isLoading;
+        if (isLoading) {
+          text.textContent = "Memproses...";
+          spinner.classList.remove("d-none");
+        } else {
+          text.textContent = "Login";
+          spinner.classList.add("d-none");
+        }
+      }
+
+      // Auto-redirect kalau sudah login & aktif
+      function maybeRedirectIfLoggedIn() {
+        const user = getCurrentUser();
+        if (!user) return;
+
+        if (String(user.status_aktif || "").toLowerCase() !== "aktif") {
+          return;
+        }
+
+        // Kalau mau beda halaman per role, atur di sini
+        const role = (user.role || "").toLowerCase();
+        if (role === "verifikator") {
+          // contoh: redirect ke dashboard verifikator khusus
+          window.location.href = "../index.html"; // ganti jika ada halaman lain
+        } else {
+          // default monitoring
+          window.location.href = "../index.html";
+        }
+      }
+
+      async function handleLogin(event) {
+        event.preventDefault();
+        hideAlert();
+        setLoading(true);
+
+        const username = document.getElementById("login-username").value.trim();
+        const password = document.getElementById("login-password").value.trim();
+
+        if (!username || !password) {
+          setLoading(false);
+          showAlert("Username dan password wajib diisi.");
+          return;
+        }
+
+        try {
+          const url =
+            API_URL_LOGIN +
+            "?action=login" +
+            "&username=" +
+            encodeURIComponent(username) +
+            "&password=" +
+            encodeURIComponent(password);
+
+          const res = await fetch(url, { method: "GET", cache: "no-store" });
+          const data = await res.json();
+          console.log("RESP_LOGIN:", data);
+
+          if (data.status === "success" && data.user) {
+            // Pastikan Apps Script mengirim minimal:
+            // username, email, nama_pegawai, role, status_aktif
+            setCurrentUser({
+              username: data.user.username,
+              email: data.user.email,
+              nama_pegawai: data.user.nama_pegawai,
+              role: data.user.role,
+              status_aktif: data.user.status_aktif,
+            });
+
+            // Redirect ke dashboard (bisa berbeda per role)
+            const role = (data.user.role || "").toLowerCase();
+            if (role === "verifikator") {
+              window.location.href = "../index.html"; // atau "dashboard-verifikator.html"
+            } else {
+              window.location.href = "../index.html";
+            }
+          } else {
+            const msg =
+              data.message || "Username / password salah atau akun tidak aktif.";
+            showAlert(msg);
+          }
+        } catch (err) {
+          console.error("ERROR_LOGIN:", err);
+          showAlert("Terjadi error saat login. Silakan coba lagi.");
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Cek sesi: kalau sudah login, langsung lempar ke dashboard
+        maybeRedirectIfLoggedIn();
+
+        const form = document.getElementById("login-form");
+        if (form) {
+          form.addEventListener("submit", handleLogin);
+        }
+
+        // Toggle show/hide password
+        const toggle = document.getElementById("toggle-password");
+        const inputPass = document.getElementById("login-password");
+        if (toggle && inputPass) {
+          toggle.addEventListener("click", () => {
+            const isText = inputPass.type === "text";
+            inputPass.type = isText ? "password" : "text";
+            const icon = toggle.querySelector("i");
+            if (icon) {
+              icon.classList.toggle("bx-hide", isText);
+              icon.classList.toggle("bx-show", !isText);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

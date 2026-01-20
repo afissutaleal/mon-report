@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="id" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Mon-Report</title>
+  <meta name="description" content="" />
+
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+  <link rel="stylesheet" href="../assets/vendor/css/core.css" />
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" />
+  <link rel="stylesheet" href="../assets/css/demo.css" />
+
+  <style>
+    .app-brand-link { display:flex; align-items:center; gap:.5rem; }
+    .app-brand-logo img { width:clamp(22px,2vw,32px); height:auto; display:block; }
+    .req::after { content:" *"; color:#dc3545; font-weight:700; }
+    .small-hint { font-size:.82rem; color:#6c757d; }
+    .section-title { font-weight:600; margin-bottom:.5rem; }
+  </style>
+</head>
+
+<body>
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+
+      <!-- Menu -->
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="../index.html" class="app-brand-link">
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Mon-Report</span>
+          </a>
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <li class="menu-item">
+            <a href="../index.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <div>Dashboard</div>
+            </a>
+          </li>
+
+          <li class="menu-item active">
+            <a href="form-radio-fm.html" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-detail"></i>
+              <div>Form Pengukuran</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item active">
+                <a href="form-radio-fm.html" class="menu-link">
+                  <div>Radio FM</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="form-tv-digital.html" class="menu-link">
+                  <div>TV Digital</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-item">
+            <a href="data-spt.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-detail"></i>
+              <div>Data SPT</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="data-hasil-ukur.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div>Data Hasil Ukur</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="laporan.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-file"></i>
+              <div>Laporan</div>
+            </a>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Master Data</span>
+          </li>
+          <li class="menu-item">
+            <a href="database-sims.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div>Database SIMS</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="html/akun.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+              <div data-i18n="Akun">Akun</div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- /Menu -->
+
+      <div class="layout-page">
+        <!-- Navbar -->
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl align-items-center bg-navbar-theme navbar-minimal"
+          id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-center me-3 d-xl-none">
+            <a class="nav-item nav-link px-0" href="javascript:void(0);">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav align-items-center flex-grow-1"></div>
+
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item me-3">
+              <a class="nav-link position-relative" href="notifikasi.html">
+                <i class="bx bx-bell bx-sm"></i>
+                <span class="notif-dot"></span>
+              </a>
+            </li>
+
+            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                <div class="avatar avatar-online">
+                  <img src="../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle" />
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="auth-login-basic.html" id="btn-logout">
+                    <i class="bx bx-power-off me-2"></i>
+                    <span class="align-middle">Log Out</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /Navbar -->
+
+        <div class="content-wrapper">
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Form </span>Pengukuran</h4>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">Form Pengukuran Radio FM</h5>
+                    <small class="text-muted">Simpan bertahap boleh. Kolom wajib hanya yang bertanda *.</small>
+                  </div>
+
+                  <div class="card-body">
+                    <form id="form-radio-fm" enctype="multipart/form-data">
+
+                      <!-- Fixed -->
+                      <input type="hidden" name="layanan" value="FM" />
+                      <input type="hidden" name="id_spt" id="id_spt_hidden" value="" />
+
+                      <!-- A. Data SPT -->
+                      <h6 class="mb-3">A. Data SPT</h6>
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label req" for="nomor_spt">Nomor SPT</label>
+                          <input type="text" id="nomor_spt" name="nomor_spt" class="form-control" required />
+                          <div class="small-hint">Dipakai sebagai id_spt sementara (otomatis disamakan).</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label" for="tanggal_spt">Tanggal SPT</label>
+                          <input type="date" id="tanggal_spt" name="tanggal_spt" class="form-control" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label" for="upload_spt">Upload SPT (PDF/JPG)</label>
+                          <input type="file" id="upload_spt" name="upload_spt" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label" for="nama_kegiatan">Nama Kegiatan</label>
+                          <input type="text" id="nama_kegiatan" name="nama_kegiatan" class="form-control"
+                            placeholder="Pengukuran Parameter Teknis Stasiun Radio Siaran FM" />
+                          <div class="small-hint">Contoh : Pengukuran Parameter Teknis Stasiun Radio Siaran FM</div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label req" for="kab_kota">Kab/Kota</label>
+                          <select id="kab_kota" name="kab_kota" class="form-select" required>
+                            <option value="">-- Pilih Kab/Kota --</option>
+                            <option value="KOTA SAMARINDA">KOTA SAMARINDA</option>
+                            <option value="KOTA BALIKPAPAN">KOTA BALIKPAPAN</option>
+                            <option value="KOTA BONTANG">KOTA BONTANG</option>
+                            <option value="BERAU">BERAU</option>
+                            <option value="MAHAKAM ULU">MAHAKAM ULU</option>
+                            <option value="KUTAI TIMUR">KUTAI TIMUR</option>
+                            <option value="KUTAI BARAT">KUTAI BARAT</option>
+                            <option value="KUTAI KARTANEGARA">KUTAI KARTANEGARA</option>
+                            <option value="PENAJAM PASER UTARA">PENAJAM PASER UTARA</option>
+                            <option value="PASER">PASER</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label" for="tanggal_mulai">Tanggal Mulai</label>
+                          <input type="date" id="tanggal_mulai" name="tanggal_mulai" class="form-control" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label" for="tanggal_selesai">Tanggal Selesai</label>
+                          <input type="date" id="tanggal_selesai" name="tanggal_selesai" class="form-control" />
+                        </div>
+                      </div>
+
+                      <hr class="my-4">
+
+                      <!-- B. Petugas -->
+                      <h6 class="mb-3">B. Petugas</h6>
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Petugas 1</label>
+                          <select name="petugas_1" class="form-select petugas-select">
+                            <option value="">-- Pilih Petugas --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Petugas 2</label>
+                          <select name="petugas_2" class="form-select petugas-select">
+                            <option value="">-- Pilih Petugas --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Petugas 3</label>
+                          <select name="petugas_3" class="form-select petugas-select">
+                            <option value="">-- Pilih Petugas --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Petugas 4</label>
+                          <select name="petugas_4" class="form-select petugas-select">
+                            <option value="">-- Pilih Petugas --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Petugas 5</label>
+                          <select name="petugas_5" class="form-select petugas-select">
+                            <option value="">-- Pilih Petugas --</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <hr class="my-4">
+
+                      <!-- C. Perangkat -->
+                      <h6 class="mb-3">C. Perangkat</h6>
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Perangkat 1</label>
+                          <select name="perangkat_1" class="form-select perangkat-select">
+                            <option value="">-- Pilih Perangkat --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Perangkat 2</label>
+                          <select name="perangkat_2" class="form-select perangkat-select">
+                            <option value="">-- Pilih Perangkat --</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label class="form-label">Perangkat 3</label>
+                          <select name="perangkat_3" class="form-select perangkat-select">
+                            <option value="">-- Pilih Perangkat --</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <hr class="my-4">
+
+                      <!-- BLOK PER FREKUENSI (D s/d I) -->
+                      <h6 class="mb-3">D–I. Data per Frekuensi</h6>
+
+                      <div id="container-pengukuran">
+                        <div class="card mb-3 blok-pengukuran" data-index="1">
+                          <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="fw-semibold judul-pengukuran">Frekuensi #1</span>
+                            <button type="button" class="btn btn-sm btn-outline-danger btn-hapus-pengukuran d-none">Hapus</button>
+                          </div>
+
+                          <div class="card-body">
+                            <!-- D. Identitas Stasiun -->
+                            <div class="section-title">D. Identitas Stasiun</div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label req">Nama Client</label>
+                                <input type="text" name="nama_client[]" class="form-control" required />
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Nama Stasiun</label>
+                                <input type="text" name="nama_stasiun[]" class="form-control" />
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Nama Penanggungjawab</label>
+                                <input type="text" name="nama_penanggungjawab[]" class="form-control" />
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email[]" class="form-control" />
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Telepon</label>
+                                <input type="text" name="telepon[]" class="form-control" />
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Tanggal Pengukuran</label>
+                                <input type="date" id="tanggal_pengukuran" name="tanggal_pengukuran[]" class="form-control" />
+                              </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- E. Data ISR -->
+                            <div class="section-title">E. Data ISR</div>
+                            <div class="row">
+                              <div class="col-md-4 mb-3">
+                                <label class="form-label">ISR Nomor</label>
+                                <input type="text" name="isr_nomor[]" class="form-control" />
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label class="form-label">Masa Laku ISR</label>
+                                <input type="date" name="isr_masalaku[]" class="form-control" />
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label class="form-label">Frekuensi ISR (MHz)</label>
+                                <input type="number" step="0.001" name="frekuensi_isr_mhz[]" class="form-control" />
+                              </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- F. Lokasi -->
+                            <div class="section-title">F. Lokasi</div>
+                            <div class="row">
+                              <div class="col-12"><div class="fw-semibold mb-2">Lokasi Pemancar</div></div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Alamat Pemancar</label>
+                                <input type="text" name="pemancar_alamat[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">MDPL Pemancar</label>
+                                <input type="number" step="0.1" name="pemancar_mdpl[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Latitude Pemancar</label>
+                                <input type="number" step="0.000001" name="pemancar_latitude[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Longitude Pemancar</label>
+                                <input type="number" step="0.000001" name="pemancar_longitude[]" class="form-control" />
+                              </div>
+
+                              <div class="col-12 mt-3"><div class="fw-semibold mb-2">Lokasi Studio</div></div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Alamat Studio</label>
+                                <input type="text" name="studio_alamat[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Latitude Studio</label>
+                                <input type="number" step="0.000001" name="studio_latitude[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Longitude Studio</label>
+                                <input type="number" step="0.000001" name="studio_longitude[]" class="form-control" />
+                              </div>
+
+                              <div class="col-12 mt-3"><div class="fw-semibold mb-2">Lokasi Pengukuran</div></div>
+                              <div class="col-md-6 mb-3">
+                                <label class="form-label">Alamat Lokasi Ukur</label>
+                                <input type="text" name="ukur_alamat[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Latitude Ukur</label>
+                                <input type="number" step="0.000001" name="ukur_latitude[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Longitude Ukur</label>
+                                <input type="number" step="0.000001" name="ukur_longitude[]" class="form-control" />
+                              </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- G. Spesifikasi Perangkat -->
+                            <div class="section-title">G. Spesifikasi Perangkat</div>
+                            <div class="row">
+                              <div class="col-12"><div class="fw-semibold mb-2">Pemancar</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Jenis</label><input type="text" name="pemancar_jenis[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Merk</label><input type="text" name="pemancar_merk[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Type</label><input type="text" name="pemancar_type[]" class="form-control" /></div>
+
+                              <div class="col-12 mt-3"><div class="fw-semibold mb-2">Antena</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Jenis</label><input type="text" name="antena_jenis[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Merk</label><input type="text" name="antena_merk[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Type</label><input type="text" name="antena_type[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Jumlah</label><input type="number" step="1" name="antena_jumlah[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Bay</label><input type="number" step="1" name="antena_bay[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Tinggi Tower (m)</label><input type="number" step="0.1" name="antena_tinggitower[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Polarisasi</label><input type="text" name="antena_polarisasi[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Gain</label><input type="number" step="0.1" name="antena_gain[]" class="form-control" /></div>
+
+                              <div class="col-12 mt-3"><div class="fw-semibold mb-2">Kabel</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Jenis</label><input type="text" name="kabel_jenis[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Merk</label><input type="text" name="kabel_merk[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Type</label><input type="text" name="kabel_type[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Panjang</label><input type="number" step="0.1" name="kabel_panjang[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Loss</label><input type="number" step="0.01" name="kabel_loss[]" class="form-control" /></div>
+
+                              <div class="col-12 mt-3"><div class="fw-semibold mb-2">STL</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Merk STL</label><input type="text" name="stl_merk[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Frekuensi STL</label><input type="number" step="0.001" name="stl_frekuensi[]" class="form-control" /></div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- H. Hasil Pengukuran -->
+                            <div class="section-title">H. Hasil Pengukuran</div>
+                            <div class="row">
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label req">Frekuensi Ukur (MHz)</label>
+                                <input type="number" step="0.001" name="frekuensi_ukur_mhz[]" class="form-control" required />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Kanal</label>
+                                <input type="text" name="kanal[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Pergeseran (kHz)</label>
+                                <input type="number" step="0.001" name="pergeseran_khz[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Level (dBm)</label>
+                                <input type="number" step="0.01" name="level_dbm[]" class="form-control" />
+                              </div>
+
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Bandwidth (MHz)</label>
+                                <input type="number" step="0.001" name="bandwidth_mhz[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Deviasi (kHz)</label>
+                                <input type="number" step="0.01" name="deviasi_khz[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Field Strength (dBµV/m)</label>
+                                <input type="number" step="0.01" name="fieldstrength_dbuvm[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Daya Pancar (Watt)</label>
+                                <input type="number" step="0.1" name="dayapancar_watt[]" class="form-control" />
+                              </div>
+
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">ERP Hitung (dBm)</label>
+                                <input type="number" step="0.001" name="erp_hitung_dbm[]" class="form-control" />
+                              </div>
+
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Harmonisa 1 (dB)</label>
+                                <input type="number" step="0.01" name="harmonisa1_db[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Harmonisa 2 (dB)</label>
+                                <input type="number" step="0.01" name="harmonisa2_db[]" class="form-control" />
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label class="form-label">Harmonisa 3 (dB)</label>
+                                <input type="number" step="0.01" name="harmonisa3_db[]" class="form-control" />
+                              </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- Capture -->
+                            <div class="row">
+                              <div class="col-12 mb-2"><div class="fw-semibold">Capture/Screenshot</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Frekuensi</label><input type="file" name="capture_frekuensi[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Level</label><input type="file" name="capture_level[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Bandwidth</label><input type="file" name="capture_bandwidth[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Deviasi</label><input type="file" name="capture_deviasi[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Field Strength</label><input type="file" name="capture_fieldstrength[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Capture Harmonisa</label><input type="file" name="capture_harmonisa[]" class="form-control" /></div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- Foto -->
+                            <div class="row">
+                              <div class="col-12 mb-2"><div class="fw-semibold">Foto Dokumentasi</div></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto Pemancar</label><input type="file" name="foto_pemancar[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto Antena</label><input type="file" name="foto_antena[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto Kabel</label><input type="file" name="foto_kabel[]" class="form-control" /></div>
+
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto Koordinat Pemancar</label><input type="file" name="foto_koordinat_pemancar[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto Koordinat Studio</label><input type="file" name="foto_koordinat_studio[]" class="form-control" /></div>
+                              <div class="col-md-4 mb-3"><label class="form-label">Foto STL</label><input type="file" name="foto_stl[]" class="form-control" /></div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="mb-3">
+                              <label class="form-label req">Status</label>
+                              <select name="status[]" class="form-select" required>
+                                <option value="">-- Pilih Status --</option>
+                                <option value="Sesuai ISR">Sesuai ISR</option>
+                                <option value="Tidak Sesuai Parameter Teknis">Tidak Sesuai Parameter Teknis</option>
+                                <option value="Off Air">Off Air</option>
+                              </select>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="section-title">I. Keterangan</div>
+                            <div class="row">
+                              <div class="col-12 mb-3">
+                                <label class="form-label">Keterangan</label>
+                                <textarea name="keterangan[]" class="form-control" rows="3"
+                                  placeholder="Contoh : Radio sedang dalam kondisi Off Air karena ... | dan sebagainya"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="button" class="btn btn-outline-primary mb-4" id="btn-tambah-pengukuran">
+                        + Tambah Frekuensi / Pengukuran
+                      </button>
+
+                      <div class="d-flex justify-content-end gap-2 mt-4">
+                        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                        <button type="submit" class="btn btn-primary" id="btn-submit">Kirim Pengukuran</button>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+              <div class="mb-2 mb-md-0">
+                ©
+                <script>document.write(new Date().getFullYear());</script>
+                , Mon-Report
+                <a href="https://pelayanan.balmonsamarinda.com/" target="_blank" class="footer-link fw-bolder">Balmon Samarinda</a>
+              </div>
+              <div></div>
+            </div>
+          </footer>
+
+          <div class="content-backdrop fade"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+
+  <!-- Core JS -->
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!--MAIN JS-->
+  <script>
+  const SCRIPT_URL_FORM =
+    'https://script.google.com/macros/s/AKfycbyZUQjXNJdhhRrD3Hsev_X0Z9ilcJml3ICQK0ygqssDrGcrXTYbsAz3dZtXMk8r0bBN/exec';
+
+  const DRAFT_KEY = 'draft_form_radio_fm_v12';
+
+  const NAMA_PETUGAS = [
+    "Warko, S.Kom, M.Si","Widhy Baskoro, ST","Andreo Yustiantoro Anjaya, ST","Muhammad Hariadi, SE",
+    "Duiyanti Milo Rundupadang, ST","Roy Mallombasi, ST","Bhayu Wisnu Wardhana, SE","Sri Sukisno, ST",
+    "Lia Agustin, ST","Siti Nurhayati, SH","Rifyal, ST","Yudi Setiawan, ST","Rosowati, SE",
+    "Taman Dwi Wijayanti, A.md","Andi Muh. Syafaat, ST","Muhammad Alif Anhasdio F, ST",
+    "Datin Annaba, S. Kom","Adha Trisna Lidya, S.Kom","Maksudi","Ade Ulfah Laelatussifa, A.md",
+    "Erlangga Hari Prasetyo, S.Si","Fathul Mufiidah, S.Si","Irin Purwadi, SE","Salsabila Khansa Adinda, SE",
+    "Binti Herwindasari, A.md","Rifani Tria Agustin, A.md.T.","Tantowi Pahala Hamonangan Sianipar, S.Kom",
+    "Rendy Tri Atmadja, ST","Muclis Ependi, SH","Reni Anggraini, S.IP","Yulli Kurnianingsih, SE",
+    "Muhammad Sulhan","Juliyani","Nur Hairunisa","Ode Nurhasanah","Joko Dwi Prayogo, S.Kom",
+    "Nur Syamsul Bahri, SE","Andri Yanto","Rusdino","Wilujeng Ika Kardina, ST","Ahmad Anwar"
+  ];
+
+  const LIST_PERANGKAT = [
+    "Spectrum Analyzer Keysight N9951B",
+    "Spectrum Analyzer Anritsu MS2090A",
+    "Spectrum Analyzer Keysight N9938A",
+    "Spectrum Analyzer Agilent N9344C",
+    "Antenna Half Wave Dipole AH SYSTEM FCC-2 / 65 MHz - 180 MHz",
+    "Antenna Half Wave Dipole AH SYSTEM TV-2 / 325 MHz - 1 GHz",
+    "Antenna Logperiodic AH SYSTEM SAS-510-2 / 290 MHz to 2 GHz",
+    "Antenna Biconical AH SYSTEM SAS 542 / 20 MHz to 330 MHz",
+    "GPS Garmin 65S",
+    "GPS Garmin 66S"
+  ];
+
+  function isiDropdownPetugas() {
+    document.querySelectorAll('.petugas-select').forEach(select => {
+      select.innerHTML = '<option value="">-- Pilih Petugas --</option>';
+      NAMA_PETUGAS.forEach(nama => {
+        const opt = document.createElement('option');
+        opt.value = nama;
+        opt.textContent = nama;
+        select.appendChild(opt);
+      });
+    });
+  }
+
+  function isiDropdownPerangkat() {
+    document.querySelectorAll(".perangkat-select").forEach(select => {
+      select.innerHTML = '<option value="">-- Pilih Perangkat --</option>';
+      LIST_PERANGKAT.forEach(nama => {
+        const opt = document.createElement("option");
+        opt.value = nama;
+        opt.textContent = nama;
+        select.appendChild(opt);
+      });
+    });
+  }
+
+  function setupMultiBlocks() {
+    const container = document.getElementById("container-pengukuran");
+    const btnTambah = document.getElementById("btn-tambah-pengukuran");
+    if (!container || !btnTambah) return;
+
+    function updateIndex() {
+      const blocks = container.querySelectorAll(".blok-pengukuran");
+      blocks.forEach((blok, i) => {
+        const idx = i + 1;
+        blok.setAttribute("data-index", idx);
+        const titleEl = blok.querySelector(".judul-pengukuran");
+        if (titleEl) titleEl.textContent = "Frekuensi #" + idx;
+
+        const btnHapus = blok.querySelector(".btn-hapus-pengukuran");
+        if (!btnHapus) return;
+
+        if (idx === 1 && blocks.length === 1) {
+          btnHapus.classList.add("d-none");
+          btnHapus.onclick = null;
+        } else {
+          btnHapus.classList.remove("d-none");
+          btnHapus.onclick = function () {
+            blok.remove();
+            updateIndex();
+            saveDraft();
+          };
+        }
+      });
+    }
+
+    btnTambah.addEventListener("click", function () {
+      const blocks = container.querySelectorAll(".blok-pengukuran");
+      const last = blocks[blocks.length - 1];
+      const clone = last.cloneNode(true);
+
+      clone.querySelectorAll("input, select, textarea").forEach(el => {
+        if (el.type === "file") return;
+        if (el.tagName === "SELECT") el.selectedIndex = 0;
+        else el.value = "";
+      });
+
+      container.appendChild(clone);
+      updateIndex();
+      saveDraft();
+    });
+
+    updateIndex();
+  }
+
+  function saveDraft() {
+    const form = document.getElementById('form-radio-fm');
+    if (!form) return;
+
+    const data = {};
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      if (!el.name) return;
+      if (el.type === 'file') return;
+
+      const isArray = el.name.endsWith('[]');
+      const key = el.name;
+
+      if (isArray) {
+        if (!Array.isArray(data[key])) data[key] = [];
+        data[key].push(el.value);
+      } else {
+        data[key] = el.value;
+      }
+    });
+
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+  }
+
+  function restoreDraft() {
+    const form = document.getElementById('form-radio-fm');
+    if (!form) return;
+
+    const raw = localStorage.getItem(DRAFT_KEY);
+    if (!raw) return;
+
+    let data;
+    try { data = JSON.parse(raw); } catch { return; }
+
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      if (!el.name) return;
+      if (el.type === 'file') return;
+      if (data[el.name] !== undefined && !el.name.endsWith('[]')) el.value = data[el.name];
+    });
+
+    const container = document.getElementById("container-pengukuran");
+    const btnTambah = document.getElementById("btn-tambah-pengukuran");
+    if (!container || !btnTambah) return;
+
+    const sampleKey = Object.keys(data).find(k => k.endsWith('[]') && Array.isArray(data[k]) && data[k].length > 0);
+    const needed = sampleKey ? data[sampleKey].length : 1;
+
+    while (container.querySelectorAll(".blok-pengukuran").length < needed) btnTambah.click();
+
+    const indexMap = {};
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      if (!el.name) return;
+      if (el.type === 'file') return;
+      if (!el.name.endsWith('[]')) return;
+
+      const key = el.name;
+      if (!Array.isArray(data[key])) return;
+
+      if (indexMap[key] === undefined) indexMap[key] = 0;
+      const idx = indexMap[key];
+
+      if (idx < data[key].length) {
+        el.value = data[key][idx];
+        indexMap[key] = idx + 1;
+      }
+    });
+  }
+
+  function clearDraft() { localStorage.removeItem(DRAFT_KEY); }
+
+  function validateMinimal() {
+    const nomorSpt = document.getElementById('nomor_spt')?.value.trim();
+    const kabKota = document.getElementById('kab_kota')?.value.trim();
+    const namaClient0 = document.querySelector('[name="nama_client[]"]')?.value.trim();
+    const freq0 = document.querySelector('[name="frekuensi_ukur_mhz[]"]')?.value.trim();
+    const status0 = document.querySelector('[name="status[]"]')?.value.trim();
+
+    const missing = [];
+    if (!nomorSpt) missing.push('Nomor SPT');
+    if (!kabKota) missing.push('Kab/Kota');
+    if (!namaClient0) missing.push('Nama Client (Frekuensi #1)');
+    if (!freq0) missing.push('Frekuensi Ukur (Frekuensi #1)');
+    if (!status0) missing.push('Status (Frekuensi #1)');
+    return missing;
+  }
+
+  async function fileToBase64Object(file) {
+    if (!file) return null;
+    return await new Promise((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = () => {
+        const dataUrl = String(r.result || "");
+        const parts = dataUrl.split(",");
+        const base64 = parts.length > 1 ? parts[1] : "";
+        resolve({
+          name: file.name || "file",
+          type: file.type || "application/octet-stream",
+          base64
+        });
+      };
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  function collectArray(form, nameWithBrackets) {
+    return Array.from(form.querySelectorAll(`[name="${nameWithBrackets}"]`)).map(el => {
+      if (el.type === 'file') return (el.files && el.files[0]) ? el.files[0] : null;
+      return el.value ?? '';
+    });
+  }
+
+  async function buildPayload(form) {
+    const payload = {
+      action: "submit_pengukuran_fm",
+
+      layanan: (form.querySelector('[name="layanan"]')?.value || 'fm'),
+      nomor_spt: (document.getElementById('nomor_spt')?.value || '').trim(),
+      id_spt: (document.getElementById('id_spt_hidden')?.value || '').trim(),
+      tanggal_spt: (document.getElementById('tanggal_spt')?.value || ''),
+      nama_kegiatan: (document.getElementById('nama_kegiatan')?.value || ''),
+      kab_kota: (document.getElementById('kab_kota')?.value || ''),
+
+      nama_client: (document.querySelector('[name="nama_client[]"]')?.value || '').trim(),
+      nama_stasiun: (document.querySelector('[name="nama_stasiun[]"]')?.value || '').trim(),
+
+      tanggal_pengukuran: (document.querySelectorAll('[name="tanggal_pengukuran[]"]')?.value || '').trim(),
+      tanggal_mulai: document.getElementById('tanggal_mulai')?.value || '',
+      tanggal_selesai: document.getElementById('tanggal_selesai')?.value || '',
+
+      petugas_1: (form.querySelector('[name="petugas_1"]')?.value || ''),
+      petugas_2: (form.querySelector('[name="petugas_2"]')?.value || ''),
+      petugas_3: (form.querySelector('[name="petugas_3"]')?.value || ''),
+      petugas_4: (form.querySelector('[name="petugas_4"]')?.value || ''),
+      petugas_5: (form.querySelector('[name="petugas_5"]')?.value || ''),
+
+      perangkat_1: (form.querySelector('[name="perangkat_1"]')?.value || ''),
+      perangkat_2: (form.querySelector('[name="perangkat_2"]')?.value || ''),
+      perangkat_3: (form.querySelector('[name="perangkat_3"]')?.value || ''),
+
+      upload_spt: null,
+      blocks: []
+    };
+
+    const fileSpt = document.getElementById('upload_spt')?.files?.[0] || null;
+    if (fileSpt) payload.upload_spt = await fileToBase64Object(fileSpt);
+
+    const a = (n) => collectArray(form, n);
+
+    const nama_client = a('nama_client[]');
+    const nBlocks = nama_client.length;
+
+    for (let i = 0; i < nBlocks; i++) {
+      payload.blocks.push({
+        nama_client: (a('nama_client[]')[i] || ''),
+        nama_penanggungjawab: (a('nama_penanggungjawab[]')[i] || ''),
+        email: (a('email[]')[i] || ''),
+        telepon: (a('telepon[]')[i] || ''),
+        tanggal_pengukuran: (a('tanggal_pengukuran[]')[i] || ''),
+
+        isr_nomor: (a('isr_nomor[]')[i] || ''),
+        isr_masalaku: (a('isr_masalaku[]')[i] || ''),
+        frekuensi_isr_mhz: (a('frekuensi_isr_mhz[]')[i] || ''),
+
+        pemancar_alamat: (a('pemancar_alamat[]')[i] || ''),
+        pemancar_mdpl: (a('pemancar_mdpl[]')[i] || ''),
+        pemancar_latitude: (a('pemancar_latitude[]')[i] || ''),
+        pemancar_longitude: (a('pemancar_longitude[]')[i] || ''),
+
+        studio_alamat: (a('studio_alamat[]')[i] || ''),
+        studio_latitude: (a('studio_latitude[]')[i] || ''),
+        studio_longitude: (a('studio_longitude[]')[i] || ''),
+
+        ukur_alamat: (a('ukur_alamat[]')[i] || ''),
+        ukur_latitude: (a('ukur_latitude[]')[i] || ''),
+        ukur_longitude: (a('ukur_longitude[]')[i] || ''),
+
+        pemancar_jenis: (a('pemancar_jenis[]')[i] || ''),
+        pemancar_merk: (a('pemancar_merk[]')[i] || ''),
+        pemancar_type: (a('pemancar_type[]')[i] || ''),
+
+        antena_jenis: (a('antena_jenis[]')[i] || ''),
+        antena_merk: (a('antena_merk[]')[i] || ''),
+        antena_type: (a('antena_type[]')[i] || ''),
+        antena_jumlah: (a('antena_jumlah[]')[i] || ''),
+        antena_bay: (a('antena_bay[]')[i] || ''),
+        antena_tinggitower: (a('antena_tinggitower[]')[i] || ''),
+        antena_polarisasi: (a('antena_polarisasi[]')[i] || ''),
+        antena_gain: (a('antena_gain[]')[i] || ''),
+
+        kabel_jenis: (a('kabel_jenis[]')[i] || ''),
+        kabel_merk: (a('kabel_merk[]')[i] || ''),
+        kabel_type: (a('kabel_type[]')[i] || ''),
+        kabel_panjang: (a('kabel_panjang[]')[i] || ''),
+        kabel_loss: (a('kabel_loss[]')[i] || ''),
+
+        stl_merk: (a('stl_merk[]')[i] || ''),
+        stl_frekuensi: (a('stl_frekuensi[]')[i] || ''),
+
+        frekuensi_ukur_mhz: (a('frekuensi_ukur_mhz[]')[i] || ''),
+        kanal: (a('kanal[]')[i] || ''),
+        pergeseran_khz: (a('pergeseran_khz[]')[i] || ''),
+        level_dbm: (a('level_dbm[]')[i] || ''),
+        bandwidth_mhz: (a('bandwidth_mhz[]')[i] || ''),
+        deviasi_khz: (a('deviasi_khz[]')[i] || ''),
+        fieldstrength_dbuvm: (a('fieldstrength_dbuvm[]')[i] || ''),
+        dayapancar_watt: (a('dayapancar_watt[]')[i] || ''),
+        erp_hitung_dbm: (a('erp_hitung_dbm[]')[i] || ''),
+        harmonisa1_db: (a('harmonisa1_db[]')[i] || ''),
+        harmonisa2_db: (a('harmonisa2_db[]')[i] || ''),
+        harmonisa3_db: (a('harmonisa3_db[]')[i] || ''),
+
+        status: (a('status[]')[i] || ''),
+
+        capture_frekuensi: null,
+        capture_level: null,
+        capture_bandwidth: null,
+        capture_deviasi: null,
+        capture_fieldstrength: null,
+        capture_harmonisa: null,
+        foto_pemancar: null,
+        foto_antena: null,
+        foto_kabel: null,
+        foto_koordinat_pemancar: null,
+        foto_koordinat_studio: null,
+        foto_stl: null,
+
+        keterangan: (a('keterangan[]')[i] || '')
+      });
+    }
+
+    const fileFields = [
+      'capture_frekuensi[]','capture_level[]','capture_bandwidth[]','capture_deviasi[]','capture_fieldstrength[]','capture_harmonisa[]',
+      'foto_pemancar[]','foto_antena[]','foto_kabel[]','foto_koordinat_pemancar[]','foto_koordinat_studio[]','foto_stl[]'
+    ];
+
+    for (const ff of fileFields) {
+      const files = collectArray(form, ff);
+      const keyNoBr = ff.replace('[]','');
+
+      for (let i = 0; i < payload.blocks.length; i++) {
+        const f = files[i] || null;
+        if (f) payload.blocks[i][keyNoBr] = await fileToBase64Object(f);
+      }
+    }
+
+    return payload;
+  }
+
+  async function submitForm(e) {
+    e.preventDefault();
+
+    const form = document.getElementById('form-radio-fm');
+    const btn = document.getElementById('btn-submit');
+
+    const missing = validateMinimal();
+    if (missing.length) {
+      Swal.fire({ icon: 'warning', title: 'Kolom wajib belum lengkap', text: 'Lengkapi dulu: ' + missing.join(', ') });
+      return;
+    }
+
+    const nomorSpt = document.getElementById('nomor_spt').value.trim();
+    document.getElementById('id_spt_hidden').value = nomorSpt;
+
+    btn.disabled = true;
+    const oldText = btn.innerText;
+    btn.innerText = 'Mengirim...';
+
+    let res = null;
+
+    try {
+      const payload = await buildPayload(form);
+      const payloadJson = JSON.stringify(payload);
+
+      console.log("PAYLOAD_JSON_LEN:", payloadJson.length);
+
+      // PENTING: pakai text/plain agar tidak kena CORS preflight GAS
+      res = await fetch(SCRIPT_URL_FORM, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: payloadJson
+      });
+
+      const text = await res.text();
+      let json;
+      try { json = JSON.parse(text); }
+      catch { throw new Error("Response bukan JSON: " + text); }
+
+      const ok = (json && (json.ok === true || json.status === 'success' || json.status === 'ok'));
+      if (ok) {
+        form.reset();
+        clearDraft();
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil',
+          text: json.rows ? `Tersimpan ${json.rows} baris pengukuran.` : (json.message || 'Data tersimpan.')
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal menyimpan',
+          text: (json && (json.error || json.message)) ? (json.error || json.message) : 'Periksa Apps Script / koneksi.'
+        });
+      }
+
+    } catch (err) {
+      const extra = res ? `HTTP ${res.status} ${res.statusText}` : 'No HTTP response';
+      Swal.fire({ icon: 'error', title: 'Error', text: `${extra} | ${String(err)}` });
+      console.error(err);
+    } finally {
+      btn.disabled = false;
+      btn.innerText = oldText;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    isiDropdownPetugas();
+    isiDropdownPerangkat();
+    setupMultiBlocks();
+    restoreDraft();
+
+    const form = document.getElementById('form-radio-fm');
+    form.addEventListener('submit', submitForm);
+
+    form.addEventListener('input', saveDraft);
+    form.addEventListener('change', saveDraft);
+    form.addEventListener('reset', () => clearDraft());
+  });
+  </script>
+
+</body>
+</html>
