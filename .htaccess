@@ -1,30 +1,11 @@
 # ==============================================================================
 # Monreport Web Application - Apache Configuration (.htaccess)
-# Compatible with XAMPP Local, Cloud Containers (Render), and cPanel Hosting
+# Compatible with XAMPP Local, Cloud Hosting, and cPanel Hosting
 # ==============================================================================
 
 # 1. Directory Index
 DirectoryIndex index.php index.html
 
-# 2. Security: Deny direct web access to sensitive database and backup files
-<FilesMatch "(?i)\.(sqlite|sqlite3|db|sql|log|env|git.*|sh)$">
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-    <IfModule !mod_authz_core.c>
-        Order allow,deny
-        Deny from all
-    </IfModule>
-</FilesMatch>
-
-# 3. Prevent Directory Browsing
-Options -Indexes
-
-# 4. Enable RewriteEngine & Routing
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-</IfModule>
-
-# 5. UTF-8 Character Encoding
+# 2. UTF-8 Character Encoding
 AddDefaultCharset UTF-8
+
