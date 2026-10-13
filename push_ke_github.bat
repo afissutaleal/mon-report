@@ -3,7 +3,7 @@ title Push Monreport ke GitHub
 color 0b
 echo ==============================================================
 echo       PUSH PERUBAHAN MONREPORT KE REPOSITORI GITHUB
-echo       Repository: https://github.com/afissutaleal/mon-report
+echo       Repository: https://github.com/afissutaleal/monreport
 echo ==============================================================
 echo.
 cd /d C:\xampp\htdocs\monreport
