@@ -1,0 +1,6 @@
+.git
+.gitignore
+scratch/
+*.tmp
+*.log
+cookie.txt

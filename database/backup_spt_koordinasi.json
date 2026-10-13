@@ -1,0 +1,53 @@
+[
+    {
+        "id": 15,
+        "spt_number": "18\/BALMON.64\/KP.01.06\/02\/2026",
+        "title": "Koordinasi dengan AirNav Balikpapan dalam rangka pengawasan frekuensi penerbangan",
+        "category_id": 9,
+        "leader_id": 2,
+        "member_names": "Warko",
+        "location": "Kota Balikpapan",
+        "target_object": "Frekuensi Radio Navigasi & Komunikasi Penerbangan AirNav",
+        "start_date": "2026-02-19",
+        "end_date": "2026-02-20",
+        "status": "completed",
+        "notes": "Pengawasan keselamatan penerbangan dan koordinasi proteksi frekuensi aeronautika (KP.01.06)",
+        "created_at": "2026-10-09 14:30:28",
+        "category_ids": "[9]",
+        "spt_date": "2026-02-18"
+    },
+    {
+        "id": 24,
+        "spt_number": "29\/BALMON.64\/KP.01.06\/03\/2026",
+        "title": "Koordinasi pengawasan Posko Ramadan dan Idul Fitri (RAFI) 2026 dengan Otban, AirNav, BMKG Balikpapan",
+        "category_id": 9,
+        "leader_id": 2,
+        "member_names": "Muhammad Hariadi, Duiyanti Milo Rundupadang, Erlangga Hari Prasetyo, Rusdino",
+        "location": "Kota Balikpapan",
+        "target_object": "Frekuensi Penerbangan & Posko RAFI Bandara SAMS Sepinggan",
+        "start_date": "2026-03-12",
+        "end_date": "2026-03-14",
+        "status": "completed",
+        "notes": "Koordinasi lintas instansi pengawasan spektrum posko RAFI (SP.03.03)",
+        "created_at": "2026-10-09 14:30:28",
+        "category_ids": "[9]",
+        "spt_date": "2026-03-11"
+    },
+    {
+        "id": 30,
+        "spt_number": "36\/BALMON.64\/KP.01.06\/03\/2026",
+        "title": "Koordinasi pengawasan Posko Ramadan dan Hari Raya Idul Fitri 1447 H di Kota Balikpapan",
+        "category_id": 1,
+        "leader_id": 2,
+        "member_names": "Yudi Setiawan",
+        "location": "Kota Balikpapan",
+        "target_object": "Sistem Komunikasi Radio Pengawasan Posko RAFI",
+        "start_date": "2026-03-18",
+        "end_date": "2026-03-19",
+        "status": "completed",
+        "notes": "Pengawasan lapangan posko mudik lebaran (SP.03.03)",
+        "created_at": "2026-10-09 14:30:28",
+        "category_ids": "[1]",
+        "spt_date": "2026-03-17"
+    }
+]
